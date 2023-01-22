@@ -34,7 +34,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 O Habits é um app para ajudar a rastrear os hábitos, mostrando os dias que tal habitó foi realizado.
 
-- [Visite o projeto online](https://maykbrito.github.io/nlw-setup)
+- [Visit the project online](https://Rafael-Vitor-Oliveira.github.io/)
 
 ## 🔖 Layout
 
