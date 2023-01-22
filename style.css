@@ -1,0 +1,91 @@
+* {
+  margin: 0; /*retira a margin de todo o html*/
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #09090a; /*cor do fundo*/
+  color: white; /*cor das fontes*/
+}
+header {
+  display: flex; /*por padrão a disposição dos elementos é posto na mesma linha,
+  com o flex é possível "editar" o alinhamento*/
+  align-items: center;
+  justify-content: space-between; /*colocar um espaço entre os elementos*/
+  padding: 48px; /*quando é declarando somento um valor, irá ser colocado para todos os lados*/
+  position: fixed;
+  width: 100%;
+  background-color: #09090a;
+}
+button {
+  padding: 16px 24px; /*16 pixels em cima e embaixo, 24 pixels dos lados*/ /*preenchimento da caixa*/
+  border-radius: 8px;
+  border: 1px solid #8b5cf6;
+  background-color: transparent; /* deixa do fundo do botão transparente*/
+  color: white; /*cor da fonte do botão*/
+  display: flex; /* display é a disposição dos elementos dentro de um elemento, no caso, o botão*/
+  align-items: center; /*align items só funciona se o flex funcionar*/
+  gap: 12px; /*espaços entre os elementos*/
+  font-family: "Inter"; /*familia da fonte*/
+  font-weight: 600; /*grossura da fonte*/
+  font-size: 16px; /*tamanho da fonte*/
+  line-height: 125%; /*largura da linha*/
+}
+#form-habits {
+  display: flex;
+  padding: 182px 48px 48px; /*"margem da caixa*/ /*primeiro valor é o espaçamento em cima, segundo é dos lados e terceiro é embaixo*/
+  width: fit-content; /*significado que irá encaixar o conteúdo no espaço definido*/
+}
+.habits {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 60px;
+}
+.habit {
+  width: 64px;
+  height: 64px;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.days {
+  display: flex;
+  gap: 48px;
+  margin-left: 32px;
+}
+.day {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.day div /*edita toda div que tem dentro da classe "day"*/ {
+  margin-bottom: 8px;
+  font-family: "Roboto Mono";
+  font-size: 20px;
+  line-height: 125%;
+  color: #a1a1aa;
+  text-align: center;
+}
+input {
+  appearance: none; /*tiro a aparencia original do input checkbox*/
+  -webkit-appearance: none; /*para funcionar em outros navegadores, pois alguns precisam*/
+  width: 64px;
+  height: 64px;
+  border: 2px solid #27272a;
+  border-radius: 8px;
+  background: #18181b;
+}
+/*pseudo selector*/
+input:checked {
+  background: #8b5cf6;
+  border: 2px solid #a78bfa;
+}
+/*responsividade, adaptando o programa para vários dispositivos, no caso aqui, celular*/
+@media (max-width: 570px) {
+  button div {
+    display: none;
+  } /*aqui estou dizendo que quando a largura da tela for "570 pixels" o que está dentro da "div", no caso o texto "registrar meu dia", irá sumir*/
+}
